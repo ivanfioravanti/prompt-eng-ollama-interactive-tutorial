@@ -36,3 +36,31 @@ It's helpful to break this exercise down to several steps.
 1.	Modify the initial prompt template so that Ollama writes two poems.							
 2.	Give Ollama indicators as to what the poems will be about, but instead of writing in the subjects directly (e.g., dog, cat, etc.), replace those subjects with the keywords "{ANIMAL1}" and "{ANIMAL2}".							
 3.	Run the prompt and make sure that the full prompt with variable substitutions has all the words correctly substituted. If not, check to make sure your {bracket} tags are spelled correctly and formatted correctly with single moustache brackets."""
+
+exercise_6_1_hint = """The grading function in this exercise is looking for the correct categorization letter + the closing parentheses and the first letter of the name of the category, such as "C) B" or "B) B" etc.
+Let's take this exercise step by step:										
+1.	How will Ollama know what categories you want to use? Tell it! Include the four categories you want directly in the prompt. Be sure to include the parenthetical letters as well for easy classification. Feel free to use XML tags to organize your prompt and make clear to Ollama where the categories begin and end.									
+2.	Try to cut down on superfluous text so that Ollama immediately answers with the classification and ONLY the classification. There are several ways to do this, from speaking for Ollama (providing anything from the beginning of the sentence to a single open parenthesis so that Ollama knows you want the parenthetical letter as the first part of the answer) to telling Ollama that you want the classification and only the classification, skipping the preamble.
+Refer to Chapters 2 and 5 if you want a refresher on these techniques.							
+3.	Ollama may still be incorrectly categorizing or not including the names of the categories when it answers. Fix this by telling Ollama to include the full category name in its answer.)								
+4.	Be sure that you still have {email} somewhere in your prompt template so that we can properly substitute in emails for Ollama to evaluate."""
+
+exercise_6_1_solution = """
+USER TURN
+Please classify this email into the following categories: {email}
+
+Do not include any extra words except the category.
+
+<categories>
+(A) Pre-sale question
+(B) Broken or defective item
+(C) Billing question
+(D) Other (please explain)
+</categories>
+
+ASSISTANT TURN
+(
+"""
+
+exercise_6_2_hint = """The grading function in this exercise is looking for only the correct letter wrapped in <answer> tags, such as "<answer>B</answer>". The correct categorization letters are the same as in the above exercise.
+Sometimes the simplest way to go about this is to give Ollama an example of how you want its output to look. Just don't forget to wrap your example in <example></example> tags! And don't forget that if you prefill Ollama's response with anything, Ollama won't actually output that as part of its response."""
