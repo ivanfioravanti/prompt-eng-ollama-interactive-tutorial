@@ -2,7 +2,7 @@
 
 ## Course introduction and goals
 
-This course is intended to provide you with a comprehensive step-by-step understanding of how to engineer optimal prompts within Ollama using the 'qwen2.5:14b' model.
+This course was inspired by [Anthropic's Prompt Engineering Interactive Tutorial](https://github.com/anthropics/prompt-eng-interactive-tutorial) and is intended to provide you with a comprehensive step-by-step understanding of how to engineer optimal prompts within Ollama using the 'qwen2.5:14b' model.
 
 **After completing this course, you will be able to**:
 
