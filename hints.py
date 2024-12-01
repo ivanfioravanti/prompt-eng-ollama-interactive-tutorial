@@ -98,3 +98,5 @@ ASSISTANT TURN
 The correct category is:
 """
 
+exercise_8_1_hint = """The grading function in this exercise is looking for a response that contains the phrase "I do not", "I don't", or "Unfortunately".
+What should Ollama do if it doesn't know the answer?"""
