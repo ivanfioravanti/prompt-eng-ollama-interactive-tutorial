@@ -64,3 +64,37 @@ ASSISTANT TURN
 
 exercise_6_2_hint = """The grading function in this exercise is looking for only the correct letter wrapped in <answer> tags, such as "<answer>B</answer>". The correct categorization letters are the same as in the above exercise.
 Sometimes the simplest way to go about this is to give Ollama an example of how you want its output to look. Just don't forget to wrap your example in <example></example> tags! And don't forget that if you prefill Ollama's response with anything, Ollama won't actually output that as part of its response."""
+
+exercise_7_1_hint = """You're going to have to write some example emails and classify them for Ollama (with the exact formatting you want). There are multiple ways to do this. Here are some guidelines below.										
+1.	Try to have at least two example emails. Ollama doesn't need an example for all categories, and the examples don't have to be long. It's more helpful to have examples for whatever you think the trickier categories are (which you were asked to think about at the bottom of Chapter 6 Exercise 1). XML tags will help you separate out your examples from the rest of your prompt, although it's unnecessary.									
+2.	Make sure your example answer formatting is exactly the format you want Ollama to use, so Ollama can emulate the format as well. This format should make it so that Ollama's answer ends in the letter of the category. Wherever you put the {email} placeholder, make sure that it's formatted exactly like your example emails.									
+3.	Make sure you still have the categories listed within the prompt itself, otherwise Ollama won't know what categories to reference, as well as {email} as a placeholder for substitution."""
+
+exercise_7_1_solution = """
+USER TURN
+Please classify emails into the following categories, and do not include explanations: 
+<categories>
+(A) Pre-sale question
+(B) Broken or defective item
+(C) Billing question
+(D) Other (please explain)
+</categories>
+
+Here are a few examples of correct answer formatting:
+<examples>
+Q: How much does it cost to buy a Mixmaster4000?
+A: The correct category is: A
+
+Q: My Mixmaster won't turn on.
+A: The correct category is: B
+
+Q: Please remove me from your mailing list.
+A: The correct category is: D
+</examples>
+
+Here is the email for you to categorize: {email}
+
+ASSISTANT TURN
+The correct category is:
+"""
+
