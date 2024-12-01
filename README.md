@@ -31,8 +31,6 @@ Each chapter consists of a lesson and a set of exercises.
 
 - **Chapter 2:** Being Clear and Direct  
 
-## 🤔 Coming soon maybe 🤔
-
 - **Chapter 3:** Assigning Roles
 
 ### Intermediate
@@ -59,4 +57,7 @@ Each chapter consists of a lesson and a set of exercises.
 - **Appendix:** Beyond Standard Prompting
   - Chaining Prompts
   - Tool Use
+
+  ## 🤔 Coming soon maybe 🤔
+  
   - Search & Retrieval
