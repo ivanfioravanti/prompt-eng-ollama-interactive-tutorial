@@ -169,3 +169,67 @@ Find the relevant issues and write the Socratic tutor-style response. Do not giv
 
 Put each issue in <issue> tags and put your final response in <response> tags.
 """
+
+exercise_10_2_1_solution = """
+def get_user(user_id):
+    \"""
+    Retrieves a user from the database by their user ID.
+
+    Args:
+       user_id: The integer ID of the user to retrieve.
+       
+    Returns: 
+        None
+    \"""
+    for user in db["users"]:
+        if user["id"] == user_id:
+            return user
+    return None
+
+def get_product(product_id):
+    \"""
+    Retrieves a product from the database by ID.
+
+    Args:
+       product_id: The integer ID of the product to retrieve.
+       
+    Returns: 
+        None
+    \"""
+    for product in db["products"]:
+        if product["id"] == product_id:
+            return product
+    return None
+
+def add_user(name, email):
+    \"""
+    Add a user to the database.
+
+    Args:
+       name: The name of the user to add to the database.
+       email: The email of the user to add to the database
+       
+    Returns: 
+        None
+    \"""
+    user_id = len(db["users"]) + 1
+    user = {"id": user_id, "name": name, "email": email}
+    db["users"].append(user)
+    return user
+
+def add_product(name, price):
+    \"""
+    Add a Product to the database.
+
+    Args:
+       name: The name of the product to add to the database.
+       price: price of the product to the database 
+       
+    Returns: 
+        None
+    \"""
+    product_id = len(db["products"]) + 1
+    product = {"id": product_id, "name": name, "price": price}
+    db["products"].append(product)
+    return product
+"""
